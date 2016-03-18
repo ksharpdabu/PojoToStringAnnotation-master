@@ -48,6 +48,7 @@ final class CodeGenerator {
                 .addJavadoc("@return string suitable for {@param instance}'s toString()")
                 .addModifiers(PUBLIC, STATIC)
                 .addParameter(get(annotatedClass.getType()), "instance")
+//                将刚才创建的return语句添加到方法体中
                 .addStatement(builder.toString())
                 .returns(String.class)
                 .build();
